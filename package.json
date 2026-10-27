@@ -1,7 +1,7 @@
 {
 	"name": "@coffic/providers",
 	"version": "0.1.0",
-	"description": "统一 Provider 契约：Footer / Header / Home / I18n / Layout / Routes / Crawl（依赖 @coffic/cosy-kernel，供 cofficlab 与 kuaiyizhi-web 共享）",
+	"description": "统一 Provider 契约 + 默认实现：Footer / Header / Home / I18n / Layout / Routes / Crawl（依赖 @coffic/cosy-kernel，供 cofficlab 与 kuaiyizhi-web 共享）",
 	"type": "module",
 	"license": "MIT",
 	"keywords": [
@@ -12,40 +12,40 @@
 		"cofficlab",
 		"kuaiyizhi"
 	],
-	"main": "./src/index.ts",
-	"types": "./src/index.ts",
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
 	"exports": {
 		".": {
-			"types": "./src/index.ts",
-			"default": "./src/index.ts"
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
 		},
 		"./footer": {
-			"types": "./src/footer.ts",
-			"default": "./src/footer.ts"
+			"types": "./dist/footer.d.ts",
+			"default": "./dist/footer.js"
 		},
 		"./header": {
-			"types": "./src/header.ts",
-			"default": "./src/header.ts"
+			"types": "./dist/header.d.ts",
+			"default": "./dist/header.js"
 		},
 		"./home": {
-			"types": "./src/home.ts",
-			"default": "./src/home.ts"
+			"types": "./dist/home.d.ts",
+			"default": "./dist/home.js"
 		},
 		"./i18n": {
-			"types": "./src/i18n.ts",
-			"default": "./src/i18n.ts"
+			"types": "./dist/i18n.d.ts",
+			"default": "./dist/i18n.js"
 		},
 		"./layout": {
-			"types": "./src/layout.ts",
-			"default": "./src/layout.ts"
+			"types": "./dist/layout.d.ts",
+			"default": "./dist/layout.js"
 		},
 		"./routes": {
-			"types": "./src/routes.ts",
-			"default": "./src/routes.ts"
+			"types": "./dist/routes.d.ts",
+			"default": "./dist/routes.js"
 		},
 		"./crawl": {
-			"types": "./src/crawl.ts",
-			"default": "./src/crawl.ts"
+			"types": "./dist/crawl.d.ts",
+			"default": "./dist/crawl.js"
 		}
 	},
 	"files": [

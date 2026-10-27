@@ -65,10 +65,11 @@
 		"type": "git",
 		"url": "git+https://github.com/CosyZone/CosyProviders.git"
 	},
-	"dependencies": {
-		"@coffic/cosy-kernel": "github:CosyZone/CosyKernel#v0.1.0"
+	"peerDependencies": {
+		"@coffic/cosy-kernel": ">=0.1.0"
 	},
 	"devDependencies": {
+		"@coffic/cosy-kernel": "github:CosyZone/CosyKernel#v0.1.0",
 		"@types/node": "^24.12.4",
 		"typescript": "^5.9.3"
 	}

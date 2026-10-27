@@ -7,11 +7,10 @@ settings:
 importers:
 
   .:
-    dependencies:
+    devDependencies:
       '@coffic/cosy-kernel':
         specifier: github:CosyZone/CosyKernel#v0.1.0
         version: https://codeload.github.com/CosyZone/CosyKernel/tar.gz/58102a3c357c2a852ab232f2e5a7b382592050dc
-    devDependencies:
       '@types/node':
         specifier: ^24.12.4
         version: 24.19.2

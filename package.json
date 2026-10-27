@@ -1,0 +1,75 @@
+{
+	"name": "@coffic/providers",
+	"version": "0.1.0",
+	"description": "统一 Provider 契约：Footer / Header / Home / I18n / Layout / Routes / Crawl（依赖 @coffic/cosy-kernel，供 cofficlab 与 kuaiyizhi-web 共享）",
+	"type": "module",
+	"license": "MIT",
+	"keywords": [
+		"provider",
+		"contract",
+		"plugin",
+		"cosy",
+		"cofficlab",
+		"kuaiyizhi"
+	],
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
+		},
+		"./footer": {
+			"types": "./dist/footer.d.ts",
+			"default": "./dist/footer.js"
+		},
+		"./header": {
+			"types": "./dist/header.d.ts",
+			"default": "./dist/header.js"
+		},
+		"./home": {
+			"types": "./dist/home.d.ts",
+			"default": "./dist/home.js"
+		},
+		"./i18n": {
+			"types": "./dist/i18n.d.ts",
+			"default": "./dist/i18n.js"
+		},
+		"./layout": {
+			"types": "./dist/layout.d.ts",
+			"default": "./dist/layout.js"
+		},
+		"./routes": {
+			"types": "./dist/routes.d.ts",
+			"default": "./dist/routes.js"
+		},
+		"./crawl": {
+			"types": "./dist/crawl.d.ts",
+			"default": "./dist/crawl.js"
+		}
+	},
+	"files": [
+		"dist",
+		"src"
+	],
+	"engines": {
+		"node": ">=20.0.0"
+	},
+	"scripts": {
+		"build": "tsc -p tsconfig.build.json",
+		"test": "node --experimental-strip-types --test src/__tests__/*.test.ts",
+		"check": "tsc --noEmit -p tsconfig.json",
+		"prepublishOnly": "pnpm check && pnpm test && pnpm build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/CosyZone/CosyProviders.git"
+	},
+	"dependencies": {
+		"@coffic/cosy-kernel": "github:CosyZone/CosyKernel#v0.1.0"
+	},
+	"devDependencies": {
+		"@types/node": "^24.12.4",
+		"typescript": "^5.9.3"
+	}
+}

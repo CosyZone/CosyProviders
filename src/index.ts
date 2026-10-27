@@ -1,10 +1,10 @@
 /**
  * @coffic/providers
  *
- * 统一 Provider 契约包：Footer / Header / Home / I18n / Layout / Routes / Crawl
+ * 统一 Provider 契约 + 默认实现：
+ * Footer / Header / Home / I18n / Layout / Routes / Crawl
  *
  * 依赖 @coffic/cosy-kernel，供 cofficlab 与 kuaiyizhi-web 共享。
- * 接口取两端超集，Token 统一使用 `site.*` 命名空间。
  *
  * @packageDocumentation
  */
@@ -43,20 +43,27 @@ export {
 	type HomeProviding,
 } from "./home.js";
 
-// I18n Provider
+// I18n Provider + 默认实现 + 工具函数
 export {
 	I18nProvidingToken,
+	I18nProvider,
 	type LocaleCode,
 	type LocaleDescriptor,
 	type TranslationCatalog,
 	type I18nExtension,
 	type I18nContext,
 	type I18nProviding,
+	// 工具函数
+	defaultLocales,
+	defaultLocale,
+	supportedLocales,
+	isChineseLocale,
 } from "./i18n.js";
 
-// Layout Provider
+// Layout Provider + 默认实现
 export {
 	LayoutProvidingToken,
+	DefaultLayoutProvider,
 	type LayoutRegion,
 	type LayoutDefinition,
 	type LayoutView,
@@ -70,11 +77,15 @@ export {
 	type RouteProviding,
 } from "./routes.js";
 
-// Crawl Provider
+// Crawl Provider + 匹配工具
 export {
 	CrawlPolicyProvidingToken,
 	type CrawlRule,
 	type CrawlPolicyProviding,
-	matchesCrawlRule,
+	// 匹配工具函数
+	normalizeCrawlPath,
 	stripLocalePrefix,
+	matchesCrawlPrefix,
+	shouldNoindexPath,
+	matchesCrawlRule,
 } from "./crawl.js";
